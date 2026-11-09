@@ -1,0 +1,26 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/challenger-flyer.html"
+        ],
+        "createdAt": "2026-11-09T06:19:35.744Z",
+        "reason": "Claude: unchosen decision-round sketch, not shipped"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/*.html"
+        ],
+        "createdAt": "2026-11-09T06:41:12.138Z",
+        "reason": "Claude: discarded decision-round sketches for the rejected direction, not shipped"
+      }
+    ]
+  }
+}

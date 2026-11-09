@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-09T12:20:00Z",
+  "title": "Design System: Aurex Club",
+  "extensions": {
+    "colorMeta": {
+      "gold": { "role": "primary", "displayName": "Champagne Gold", "canonical": "#c8a96a", "tonalRamp": ["#2a2214", "#4a3c22", "#6d5932", "#94793f", "#c8a96a", "#d9bd82", "#e8d5ab", "#f5ecd8"] },
+      "gold-hi": { "role": "primary", "displayName": "Lit Champagne", "canonical": "#d9bd82", "tonalRamp": ["#2a2214", "#4a3c22", "#6d5932", "#94793f", "#c8a96a", "#d9bd82", "#e8d5ab", "#f5ecd8"] },
+      "ink": { "role": "neutral", "displayName": "Club Ink", "canonical": "#0b0b0a", "tonalRamp": ["#050504", "#0b0b0a", "#151513", "#1f1e1b", "#2b2a26", "#3a3833", "#55524b", "#77736a"] },
+      "panel": { "role": "neutral", "displayName": "Panel Black", "canonical": "#151513", "tonalRamp": ["#050504", "#0b0b0a", "#151513", "#1f1e1b", "#2b2a26", "#3a3833", "#55524b", "#77736a"] },
+      "ivory": { "role": "neutral", "displayName": "Warm Ivory", "canonical": "#f2ede4", "tonalRamp": ["#2b2924", "#4a463e", "#6c665b", "#8f887b", "#aaa397", "#cfc8bb", "#e2dccf", "#f2ede4"] },
+      "muted": { "role": "neutral", "displayName": "Stone", "canonical": "#aaa397", "tonalRamp": ["#2b2924", "#4a463e", "#6c665b", "#8f887b", "#aaa397", "#cfc8bb", "#e2dccf", "#f2ede4"] },
+      "line": { "role": "neutral", "displayName": "Hairline", "canonical": "rgb(242 237 228 / .14)", "tonalRamp": ["rgb(242 237 228 / .06)", "rgb(242 237 228 / .10)", "rgb(242 237 228 / .14)", "rgb(242 237 228 / .20)", "rgb(242 237 228 / .30)", "rgb(242 237 228 / .35)", "rgb(242 237 228 / .55)", "rgb(242 237 228 / .80)"] },
+      "err": { "role": "functional", "displayName": "Clay Error", "canonical": "#f0a48a", "tonalRamp": ["#3a1a10", "#5e2c1d", "#87412c", "#b05a40", "#d97c60", "#f0a48a", "#f6c4b1", "#fbe3d9"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero headline only; uppercase, 125% width (11.2vw at 108% under 860px)." },
+      "headline": { "displayName": "Headline", "purpose": "Section titles (h2); uppercase, 125% width." },
+      "title": { "displayName": "Title", "purpose": "Feature, tile, plan and confirmation titles; uppercase, 125% width." },
+      "statement": { "displayName": "Statement", "purpose": "The single large light sentence-case intro paragraph, max 28ch." },
+      "body": { "displayName": "Body", "purpose": "All running copy at normal width, 40–46ch measure." },
+      "label": { "displayName": "Label", "purpose": "Buttons, link buttons, nav and footer links; uppercase, 112% width." },
+      "fine": { "displayName": "Fine", "purpose": "Placeholder disclosures, error text, notes; Stone." }
+    },
+    "shadows": [
+      { "name": "float", "value": "0 10px 30px rgb(0 0 0 / .45)", "purpose": "Fixed mobile trial button only; the one element that floats over content." }
+    ],
+    "motion": [
+      { "name": "ease", "value": "cubic-bezier(.16,1,.3,1)", "purpose": "The single house curve for every transition and animation." },
+      { "name": "state", "value": "0.3s", "purpose": "Hover and state changes on buttons, links, inputs (0.25–0.4s)." },
+      { "name": "hero-settle", "value": "settle 2.4s: scale 1.08 → 1", "purpose": "Hero image entrance." },
+      { "name": "rise", "value": "1–1.1s: translate 24–28px → 0, opacity 0 → 1", "purpose": "Hero copy (staggered .15s) and statement/feature/plan reveals." },
+      { "name": "image-reveal", "value": "clip-path inset(12% 0 0 0) → inset(0) 1.3s; img scale 1.12 → 1 1.6s", "purpose": "Scroll-linked figure and tile reveals." },
+      { "name": "tile-zoom", "value": "scale 1.04 over 1.2s", "purpose": "Photo tile hover." }
+    ],
+    "breakpoints": [
+      { "name": "nav-tight", "value": "1000px" },
+      { "name": "single-column", "value": "860px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Gold Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Square gold primary action; the booking call to action.",
+      "html": "<a class=\"ds-btn ds-btn-gold\" href=\"#\">Book a free trial</a>",
+      "css": ".ds-btn { display:inline-flex; align-items:center; justify-content:center; min-height:52px; padding:0 28px; font-family:\"Archivo\",system-ui,sans-serif; font-size:.82rem; font-weight:600; font-stretch:112%; letter-spacing:.14em; text-transform:uppercase; text-decoration:none; border:1px solid transparent; border-radius:0; cursor:pointer; transition:background .3s cubic-bezier(.16,1,.3,1),color .3s cubic-bezier(.16,1,.3,1),border-color .3s cubic-bezier(.16,1,.3,1); } .ds-btn-gold { background:#c8a96a; color:#0b0b0a; } .ds-btn-gold:hover { background:#d9bd82; } .ds-btn:focus-visible { outline:2px solid #c8a96a; outline-offset:4px; }"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Square ivory-outlined secondary action; fills ivory on hover.",
+      "html": "<a class=\"ds-btn-outline\" href=\"#\">Explore the club</a>",
+      "css": ".ds-btn-outline { display:inline-flex; align-items:center; justify-content:center; min-height:52px; padding:0 28px; font-family:\"Archivo\",system-ui,sans-serif; font-size:.82rem; font-weight:600; font-stretch:112%; letter-spacing:.14em; text-transform:uppercase; text-decoration:none; background:transparent; color:#f2ede4; border:1px solid rgb(242 237 228 / .55); border-radius:0; transition:background .3s cubic-bezier(.16,1,.3,1),color .3s cubic-bezier(.16,1,.3,1),border-color .3s cubic-bezier(.16,1,.3,1); } .ds-btn-outline:hover { background:#f2ede4; color:#0b0b0a; border-color:#f2ede4; } .ds-btn-outline:focus-visible { outline:2px solid #c8a96a; outline-offset:4px; }"
+    },
+    {
+      "name": "Arrow Link Button",
+      "kind": "button",
+      "refersTo": "button-link",
+      "description": "Boxless gold uppercase action with a line arrow that slides on hover; row-level actions.",
+      "html": "<button type=\"button\" class=\"ds-link-btn\">Enquire <svg viewBox=\"0 0 24 12\" aria-hidden=\"true\"><path d=\"M0 6h22M17 1l5 5-5 5\"/></svg></button>",
+      "css": ".ds-link-btn { display:inline-flex; align-items:center; gap:12px; background:none; border:0; padding:6px 0; color:#c8a96a; font-family:\"Archivo\",system-ui,sans-serif; font-size:.82rem; font-weight:600; font-stretch:112%; letter-spacing:.14em; text-transform:uppercase; cursor:pointer; } .ds-link-btn svg { width:24px; height:12px; fill:none; stroke:currentColor; stroke-width:1.5; transition:transform .4s cubic-bezier(.16,1,.3,1); } .ds-link-btn:hover svg { transform:translateX(6px); } .ds-link-btn:focus-visible { outline:2px solid #c8a96a; outline-offset:4px; }"
+    },
+    {
+      "name": "Underline Field",
+      "kind": "input",
+      "refersTo": "input-line",
+      "description": "Boxless underline input with small uppercase Stone label; gold on focus, clay on error.",
+      "html": "<div class=\"ds-field\"><label for=\"ds-n\">Name</label><input id=\"ds-n\" class=\"ds-input\"></div>",
+      "css": ".ds-field { background:#151513; padding:16px; font-family:\"Archivo\",system-ui,sans-serif; } .ds-field label { display:block; margin-bottom:6px; font-size:.75rem; font-weight:600; font-stretch:112%; letter-spacing:.16em; text-transform:uppercase; color:#aaa397; } .ds-input { width:100%; font:inherit; font-size:1.1rem; color:#f2ede4; background:transparent; border:0; border-bottom:1px solid rgb(242 237 228 / .35); border-radius:0; padding:10px 0; caret-color:#c8a96a; transition:border-color .3s; } .ds-input:focus { outline:none; border-bottom-color:#c8a96a; } .ds-input[aria-invalid=true] { border-bottom-color:#f0a48a; }"
+    },
+    {
+      "name": "Choice Slots",
+      "kind": "chip",
+      "refersTo": "choice-slot",
+      "description": "Square three-up radio slots; selected fills ivory.",
+      "html": "<div class=\"ds-slots\"><label><input type=\"radio\" name=\"ds-s\" checked><span>Morning</span></label><label><input type=\"radio\" name=\"ds-s\"><span>Afternoon</span></label><label><input type=\"radio\" name=\"ds-s\"><span>Evening</span></label></div>",
+      "css": ".ds-slots { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; background:#151513; padding:16px; font-family:\"Archivo\",system-ui,sans-serif; } .ds-slots label { position:relative; cursor:pointer; } .ds-slots input { position:absolute; opacity:0; inset:0; margin:0; } .ds-slots span { display:block; padding:12px 8px; text-align:center; border:1px solid rgb(242 237 228 / .3); color:#f2ede4; font-size:.92rem; font-weight:500; transition:background .25s,border-color .25s,color .25s; } .ds-slots label:hover span { border-color:#f2ede4; } .ds-slots input:checked + span { background:#f2ede4; border-color:#f2ede4; color:#0b0b0a; } .ds-slots input:focus-visible + span { outline:2px solid #c8a96a; outline-offset:3px; }"
+    },
+    {
+      "name": "Club Nav",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Wordmark left, wide uppercase links with gold hover underline, outline call to action; shown in its solid scrolled state.",
+      "html": "<header class=\"ds-nav\"><a class=\"ds-wordmark\" href=\"#\">AUREX<span>CLUB</span></a><ul><li><a href=\"#\">The Club</a></li><li><a href=\"#\">Training</a></li><li><a href=\"#\">Membership</a></li></ul></header>",
+      "css": ".ds-nav { display:flex; align-items:center; gap:32px; padding:14px 24px; background:rgb(11 11 10 / .94); border-bottom:1px solid rgb(242 237 228 / .14); color:#f2ede4; font-family:\"Archivo\",system-ui,sans-serif; } .ds-wordmark { display:inline-flex; align-items:baseline; gap:.55em; font-size:1.3rem; font-weight:600; font-stretch:125%; letter-spacing:.24em; text-decoration:none; color:inherit; line-height:1; } .ds-wordmark span { font-size:max(11px,.58em); font-weight:500; letter-spacing:.4em; color:#c8a96a; } .ds-nav ul { display:flex; gap:36px; margin:0 0 0 auto; padding:0; list-style:none; } .ds-nav ul a { color:inherit; font-size:.8rem; font-weight:500; font-stretch:112%; letter-spacing:.14em; text-transform:uppercase; text-decoration:none; padding:8px 0; border-bottom:1px solid transparent; transition:border-color .3s cubic-bezier(.16,1,.3,1); } .ds-nav ul a:hover { border-color:#c8a96a; } .ds-nav a:focus-visible { outline:2px solid #c8a96a; outline-offset:4px; }"
+    },
+    {
+      "name": "Photo Tile",
+      "kind": "card",
+      "refersTo": "photo-tile",
+      "description": "Square-cornered 3:4 full-bleed photo with ink scrim and bottom-set wide uppercase title; slow zoom on hover.",
+      "html": "<div class=\"ds-tile\"><div class=\"ds-tile-img\"></div><div class=\"ds-tile-copy\"><h3>Lift</h3><p>Heavy compound work on racks and platforms.</p></div></div>",
+      "css": ".ds-tile { position:relative; width:260px; aspect-ratio:3/4; overflow:hidden; isolation:isolate; font-family:\"Archivo\",system-ui,sans-serif; color:#f2ede4; } .ds-tile-img { position:absolute; inset:0; z-index:-2; background:radial-gradient(120% 80% at 60% 30%,#55524b 0%,#1f1e1b 55%,#0b0b0a 100%); transition:transform 1.2s cubic-bezier(.16,1,.3,1); } .ds-tile::after { content:\"\"; position:absolute; inset:0; z-index:-1; background:linear-gradient(180deg,rgb(11 11 10 / 0) 45%,rgb(11 11 10 / .85) 100%); } .ds-tile:hover .ds-tile-img { transform:scale(1.04); } .ds-tile-copy { position:absolute; left:0; right:0; bottom:0; padding:24px; } .ds-tile h3 { margin:0; font-size:1.8rem; font-weight:500; font-stretch:125%; text-transform:uppercase; letter-spacing:.01em; line-height:1.02; } .ds-tile p { margin:8px 0 0; font-size:1rem; line-height:1.6; color:#cfc8bb; }"
+    },
+    {
+      "name": "Ruled List",
+      "kind": "custom",
+      "refersTo": "ruled-list",
+      "description": "Hairline-separated rows led by an 18px gold dash; feature specifications.",
+      "html": "<ul class=\"ds-ticks\"><li>Racks and lifting platforms</li><li>Dumbbells and barbells</li><li>Open functional area</li></ul>",
+      "css": ".ds-ticks { margin:0; padding:0 16px; list-style:none; background:#0b0b0a; color:#f2ede4; font-family:\"Archivo\",system-ui,sans-serif; } .ds-ticks li { display:flex; align-items:center; gap:16px; padding:14px 0; border-bottom:1px solid rgb(242 237 228 / .14); font-size:1rem; } .ds-ticks li:first-child { border-top:1px solid rgb(242 237 228 / .14); } .ds-ticks li::before { content:\"\"; width:18px; height:1px; background:#c8a96a; flex:none; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Members' Room After Dark",
+    "overview": "Aurex is a premium club seen at night: a near-black room, warm ivory type, and one thread of champagne gold taken from the name (aurum). Photography does the emotional work. It runs full-bleed and dark, sits under soft ink scrims, and is never boxed or decorated. Around it the interface stays quiet, with hairline rules, square edges, generous dark space and very little copy.\n\nType carries the identity. Archivo, a single variable family, is stretched wide (108 to 125% width) for uppercase display and left at normal width for reading. Wide uppercase headlines next to plain sentence-case body text give the page its club register without a second typeface. Density is low. Sections breathe on viewport-scaled padding, and lists run as ruled rows, not cards.\n\nThe world follows the category standard set by the best premium gym sites (Equinox for craft, Indian gym conventions for the free-trial-first offer), executed at full craft. It refuses the cheap gym vocabulary: neon, glow, stock badges, crowded cards.",
+    "keyCharacteristics": [
+      "Near-black ground with one warm-ivory text colour and one champagne-gold accent.",
+      "One variable family: wide uppercase display, normal-width body.",
+      "Full-bleed dark photography under ink gradient scrims.",
+      "Hairline rules (1px, ivory at 14%) separate everything; no card boxes.",
+      "Square corners everywhere.",
+      "Slow, long-eased motion: image settle, clip reveals, rising copy."
+    ],
+    "rules": [
+      { "name": "The Single Thread Rule", "body": "Gold is the only hue in the interface. Use it for one filled action per view at most, and otherwise in small amounts: numerals, arrows, dashes, short headings. Never use it for body copy or large fills.", "section": "colors" },
+      { "name": "The Ink Scrim Rule", "body": "Text over photography sits on a gradient of ink (rgb 11 11 10), never on a box or a blur. Use a bottom scrim reaching about 85 to 88% opacity, plus a side scrim when copy sits lower-left.", "section": "colors" },
+      { "name": "The Two Widths Rule", "body": "Uppercase is always set wide (112% or more). Sentence case is always normal width, except the light 112% statement. Never set body text wide, and never set narrow uppercase.", "section": "typography" },
+      { "name": "The No Second Face Rule", "body": "Archivo carries every role. Add hierarchy with width, weight and case, not another family.", "section": "typography" },
+      { "name": "The Ruled Row Rule", "body": "Lists of peers (feature ticks, plans, hours, visit columns) are separated by hairline rules top and bottom, not by containers or background fills.", "section": "layout" },
+      { "name": "The Flat Club Rule", "body": "Surfaces never lift. Show hierarchy with tone (panel band), rules (hairline) and imagery. A shadow is allowed only on something that genuinely floats over the page.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do set every uppercase heading in Archivo at 112–125% width and weight 500 or lighter. Set body text at normal width.",
+      "Do run photography full-bleed and dark, and put any overlaid text on an ink gradient scrim.",
+      "Do keep gold to one filled action per view, plus small marks (numerals, arrows, dashes, short headings).",
+      "Do separate peer items with 1px hairline rules (ivory at 14%).",
+      "Do keep every corner square (0px).",
+      "Do use the house ease, cubic-bezier(.16, 1, .3, 1), and gate entrance motion behind reduced-motion."
+    ],
+    "donts": [
+      "Don't introduce a second accent hue. Clay Error is for validation only.",
+      "Don't use neon, glow, stock badges or crowded card grids. The user rejected that gym vocabulary.",
+      "Don't wrap content in bordered or shadowed cards. Use bands, rules and photographs.",
+      "Don't add shadows to anything that does not float over the page.",
+      "Don't add a second typeface. Get hierarchy from width, weight and case.",
+      "Don't round corners or use pill buttons."
+    ]
+  }
+}
